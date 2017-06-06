@@ -7,7 +7,7 @@ LDFLAGS=-L/usr/lib64/mysql -L/usr/lib64/
 ALL: report main
 
 report: $(OBJECT)
-        $(CPP) $(OBJECT) $(P) -o report.cgi $(LDFLAGS)
+	$(CPP) $(OBJECT) $(P) -o report.cgi $(LDFLAGS)
 
 main: haarp.c 
 	$(CPP) haarp.c $(P) -o haarp.cgi $(LDFLAGS)
@@ -16,4 +16,4 @@ main: haarp.c
 	$(CPP) $(P) -c -o $@ $<
 
 clean:
-      	rm -f *.cgi *.o
+	rm -f *.cgi *.o
